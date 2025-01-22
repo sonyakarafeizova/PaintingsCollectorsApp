@@ -5,7 +5,12 @@
 <body>
 <header th:replace="fragments/commons::nav"></header>
 <main>
-    <form class="welcome add-offer-form" method="" action="/">
+    <form class="welcome add-offer-form"
+          th:method="POST"
+          th:action="@{/add-painting}"
+          th:object="${paintingData}"
+
+    >
     <h1 class="text-center mt-2"><span class="badge badge-pill badge-dark">Add painting</span></h1>
 
         <div class="form-group">

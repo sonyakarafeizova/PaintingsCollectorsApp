@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57fec7ab-543f-4080-bc05-91ba6c102769" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/-PaintingsCollectorsApp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/config/Config.java" afterDir="false" />
@@ -38,7 +37,11 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/repository/StyleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/repository/StyleRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/service/StyleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/service/StyleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-painting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add-painting.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/commons.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/commons.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/init/InitService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/init/InitService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/AddPaintingDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/AddPaintingDTO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/PaintingDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/PaintingDTO.class" afterDir="false" />
@@ -176,7 +179,7 @@
       <workItem from="1716962370254" duration="4213000" />
       <workItem from="1718104268991" duration="4445000" />
       <workItem from="1718694869679" duration="66000" />
-      <workItem from="1737464782023" duration="25145000" />
+      <workItem from="1737464782023" duration="31536000" />
     </task>
     <servers />
   </component>
