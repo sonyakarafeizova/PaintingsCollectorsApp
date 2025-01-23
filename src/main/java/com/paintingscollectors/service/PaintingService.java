@@ -91,4 +91,29 @@ public class PaintingService {
         userRepository.save(userOpt.get());
     }
 
+    public boolean isPaintingFavorite(Long paintingId, Long id) {
+        Optional<User> userOpt = userRepository.findById(id);
+
+        if (userOpt.isEmpty()) {
+            return false;
+        }
+
+        Optional<Painting> paintingOpt = paintingRepository.findById(paintingId);
+
+        if (paintingOpt.isEmpty()) {
+            return false;
+        }
+
+        return userOpt.get().getFavoritePaintings().contains(paintingOpt.get());
+    }
+
+    public List<Painting> getAllLikedPaintingsByUser(Long id) {
+        Optional<User> userOpt = userRepository.findById(id);
+
+        if (userOpt.isEmpty()) {
+            return List.of();
+        }
+
+        return (List<Painting>) userOpt.get().getFavoritePaintings();
+    }
 }

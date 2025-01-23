@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57fec7ab-543f-4080-bc05-91ba6c102769" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/-PaintingsCollectorsApp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/config/Config.java" afterDir="false" />
@@ -25,7 +26,9 @@
       <change afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/service/PaintingService.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a86e2a1-1e1f-48fc-8a18-af5b7f7261d3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a86e2a1-1e1f-48fc-8a18-af5b7f7261d3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/init/InitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/init/InitService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/AddPaintingDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/AddPaintingDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/PaintingDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/PaintingDTO.java" afterDir="false" />
@@ -53,7 +56,11 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/repository/StyleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/repository/StyleRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/repository/UserRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/service/StyleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/service/StyleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/add-painting.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add-painting.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/commons.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/commons.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,38 +98,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.PaintingsCollectorsApplication.executor": "Run",
-    "Spring Boot.ResellerApplication.executor": "Run",
-    "WebServerToolWindowFactoryState": "false",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Sonya/Downloads/2024-spring-fund-expam-prep2-main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "spring.configuration.checksum": "bd3f877cb13a886c3c31869d47cdd7d2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.PaintingsCollectorsApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ResellerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sonya/Downloads/2024-spring-fund-expam-prep2-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;bd3f877cb13a886c3c31869d47cdd7d2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.paintingscollectors.vallidation.validator" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\Videos\PaintingsCollectors-App\src\main\java\com\paintingscollectors\model" />
       <recent name="C:\Users\User\Videos\PaintingsCollectors-App\src\main\java\com\paintingscollectors\service" />
@@ -136,6 +146,32 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.PaintingsCollectorsApplication">
+    <configuration name="BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.paintingscollectors.BubbleSort" />
+      <module name="PaintingsCollectors-App" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.paintingscollectors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.paintingscollectors.Test" />
+      <module name="PaintingsCollectors-App" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.paintingscollectors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PaintingsCollectorsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="PaintingsCollectors-App" />
@@ -161,6 +197,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.PaintingsCollectorsApplication" />
+        <item itemvalue="Application.BubbleSort" />
+        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +217,9 @@
       <workItem from="1716962370254" duration="4213000" />
       <workItem from="1718104268991" duration="4445000" />
       <workItem from="1718694869679" duration="66000" />
-      <workItem from="1737464782023" duration="31536000" />
+      <workItem from="1737464782023" duration="32226000" />
+      <workItem from="1737631457256" duration="951000" />
+      <workItem from="1737632440478" duration="8937000" />
     </task>
     <servers />
   </component>

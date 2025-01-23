@@ -81,5 +81,12 @@ public class UserService {
         return (List<Painting>) byId.get().getFavoritePaintings();
     }
 
+    public boolean isEmailUnique(String email) {
+        return!userRepository.existsByEmail(email);
+    }
+
+    public boolean isUsernameUnique(String username) {
+        return !userRepository.findByUsername(username).isEmpty();
+    }
 }
 
