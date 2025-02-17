@@ -1,6 +1,6 @@
 package com.paintingscollectors.vallidation.validator;
 
-import com.paintingscollectors.service.UserService;
+import com.paintingscollectors.service.impl.UserServiceImpl;
 import com.paintingscollectors.vallidation.annotation.UniqueUsername;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -12,7 +12,7 @@ import javax.validation.ConstraintValidatorContext;
 @RequiredArgsConstructor
 public class UniqueUsernameValidator implements ConstraintValidator<UniqueUsername, String> {
 
-    private final UserService userService;
+    private final UserServiceImpl userService;
 
     @Override
     public void initialize(UniqueUsername constraintAnnotation) {
@@ -25,6 +25,6 @@ public class UniqueUsernameValidator implements ConstraintValidator<UniqueUserna
             return true;
         }
 
-        return userService.isUsernameUnique(username);
+        return this.userService.getUniqueUsername(username);
     }
 }

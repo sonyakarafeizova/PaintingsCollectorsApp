@@ -13,22 +13,24 @@
 <header>
     <nav>
         <div class="home">
-            <a th:href="@{/}" >Paintings Collectors App</a>
-            <a th:href="@{/add-painting}"
-               th:if="${@userSession.isLoggedIn()}">Add Painting</a>
+            <th:block th:if="${@loggedUser.isLogged()}">
+            <a th:href="@{/home}" >Paintings Collectors App</a>
+            < <a th:href="@{/paintings/add-painting}">Add Painting</a>
+            </th:block>
+            <a th:if="${!@loggedUser.isLogged()}" href="/">Paintings Collectors App</a>
 
         </div>
         <div class="links">
             <li>
-                <a th:href="@{/login}">Login</a>
+                <a th:href="@{/users/login}">Login</a>
             </li>
 
             <li>
-                <a th:href="@{/register}">Register</a>
+                <a th:href="@{/users/register}">Register</a>
             </li>
 
             <li>
-                <a th:href="@{/logout}">Logout</a>
+                <a th:href="@{/users/logout}">Logout</a>
             </li>
         </div>
     </nav>

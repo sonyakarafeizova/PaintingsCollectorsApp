@@ -1,90 +1,58 @@
 package com.paintingscollectors.controller;
 
-import com.paintingscollectors.config.UserSession;
+
 import com.paintingscollectors.model.dto.PaintingDTO;
-import com.paintingscollectors.model.entity.Painting;
-import com.paintingscollectors.model.entity.StyleName;
+import com.paintingscollectors.model.dto.UserDTO;
 import com.paintingscollectors.service.PaintingService;
 import com.paintingscollectors.service.UserService;
+import com.paintingscollectors.util.Constant;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.transaction.Transactional;
+import javax.validation.Valid;
 import java.util.List;
-import java.util.Map;
 
-import static org.modelmapper.Converters.Collection.map;
-
+import java.util.Set;
 @Controller
 public class HomeController {
     private final UserService userService;
     private final PaintingService paintingService;
-    private final UserSession userSession;
 
-    public HomeController(UserService userService,
-                          PaintingService paintingService, UserSession userSession) {
+    @Autowired
+    public HomeController(UserService userService, PaintingService paintingService) {
         this.userService = userService;
         this.paintingService = paintingService;
-        this.userSession = userSession;
     }
 
     @GetMapping("/")
-    public String nonLoggedIndex() {
-        if (userSession.isLoggedIn()) {
-            return "redirect:/home";
+    public String index() {
+        if (this.userService.isLoggedUser()) {
+            return Constant.REDIRECT_HOME;
         }
-
         return "index";
     }
 
     @GetMapping("/home")
-    @Transactional
-    public String loggedIndex(Model model) {
-        if (!userSession.isLoggedIn()) {
-            return "redirect:/";
+    public String home(Model model) {
+        if (!this.userService.isLoggedUser()) {
+            return Constant.REDIRECT_LOGIN;
         }
+        Set<PaintingDTO> userAllPaintings = this.userService.getAllPaintingsOfLoggedUser();
+        model.addAttribute("userPaintings", userAllPaintings);
 
-        Map<StyleName, List<Painting>> allPaintings = paintingService.findAllByStyle();
+        Set<UserDTO> otherUsers = this.userService.getAllPaintingsOfOthersUsers();
+        model.addAttribute("otherUsersPaintings", otherUsers);
 
-        List<PaintingDTO> favourites = userService.findFavorites(userSession.id())
-                .stream()
-                .map(PaintingDTO::new)
-                .toList();
+        Set<PaintingDTO> myFavoriteList = this.userService.getMyFavoritesList();
+        model.addAttribute("myFavorites", myFavoriteList);
 
-        List<PaintingDTO> abstracts = allPaintings.get(StyleName.ABSTRACT)
-                .stream()
-                .map(PaintingDTO::new)
-                .toList();
-
-        List<PaintingDTO> impressionism = allPaintings.get(StyleName.IMPRESSIONISM)
-                .stream()
-                .map(PaintingDTO::new)
-                .toList();
-
-        List<PaintingDTO> realism = allPaintings.get(StyleName.REALISM)
-                .stream()
-                .map(PaintingDTO::new)
-                .toList();
-        List<PaintingDTO> expressionism = allPaintings.get(StyleName.EXPRESSIONISM)
-                .stream()
-                .map(PaintingDTO::new)
-                .toList();
-        List<PaintingDTO> surrealism = allPaintings.get(StyleName.SURREALISM)
-                .stream()
-                .map(PaintingDTO::new)
-                .toList();
-
-        model.addAttribute("abstractsData", abstracts);
-        model.addAttribute("impressionismData", impressionism);
-        model.addAttribute("realismData", realism);
-        model.addAttribute("expressionismData", expressionism);
-        model.addAttribute("surrealismData", surrealism);
-        model.addAttribute("favouritesData", favourites);
-
-
+        List<PaintingDTO> allVotedPaintings = this.paintingService.getAllPaintingsByRate();
+        model.addAttribute("allVotedPaintings", allVotedPaintings);
         return "home";
     }
-
 
 }

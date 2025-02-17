@@ -3,24 +3,21 @@ package com.paintingscollectors.model.entity;
 import com.paintingscollectors.model.BaseEntity;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Table(name = "paintings")
 public class Painting extends BaseEntity {
    @Column(nullable = false)
-    private String name;
+   private String name;
    @Column(nullable = false)
    private String author;
-   @ManyToOne
-   @JoinColumn(nullable = false)
+   @ManyToOne(fetch = FetchType.EAGER)
    private Style style;
 
-   @ManyToOne
-   @JoinColumn( nullable = false)
+   @ManyToOne(optional = false)
    private User owner;
 
-   @Column(nullable = false, length = 150)
+   @Column(nullable = false)
    private String imageUrl;
 
    @Column(nullable = false)
@@ -28,65 +25,67 @@ public class Painting extends BaseEntity {
 
    @Column(nullable = false)
    private int votes;
-   @ManyToOne(optional = false)
-   private User addedBy;
-   public Painting() {
-
-   }
 
    public String getName() {
       return name;
    }
 
-   public void setName(String name) {
+   public Painting setName(String name) {
       this.name = name;
+      return this;
    }
 
    public String getAuthor() {
       return author;
    }
 
-   public void setAuthor(String author) {
+   public Painting setAuthor(String author) {
       this.author = author;
+      return this;
    }
 
    public Style getStyle() {
       return style;
    }
 
-   public void setStyle(Style style) {
+   public Painting setStyle(Style style) {
       this.style = style;
+      return this;
    }
 
    public User getOwner() {
       return owner;
    }
 
-   public void setOwner(User owner) {
+   public Painting setOwner(User owner) {
       this.owner = owner;
+      return this;
    }
 
    public String getImageUrl() {
       return imageUrl;
    }
 
-   public void setImageUrl(String imageUrl) {
+   public Painting setImageUrl(String imageUrl) {
       this.imageUrl = imageUrl;
+      return this;
    }
 
    public boolean isFavorite() {
       return isFavorite;
    }
 
-   public void setFavorite(boolean favorite) {
+   public Painting setFavorite(boolean favorite) {
       isFavorite = favorite;
+      return this;
    }
 
    public int getVotes() {
       return votes;
    }
 
-   public void setVotes(int votes) {
+   public Painting setVotes(int votes) {
       this.votes = votes;
+      return this;
    }
 }

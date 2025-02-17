@@ -9,13 +9,14 @@ import javax.persistence.MappedSuperclass;
 public abstract class BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public BaseEntity setId(long id) {
         this.id = id;
+        return this;
     }
 }

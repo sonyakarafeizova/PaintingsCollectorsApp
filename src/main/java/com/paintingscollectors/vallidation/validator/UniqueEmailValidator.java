@@ -1,6 +1,6 @@
 package com.paintingscollectors.vallidation.validator;
 
-import com.paintingscollectors.service.UserService;
+import com.paintingscollectors.service.impl.UserServiceImpl;
 import com.paintingscollectors.vallidation.annotation.UniqueEmail;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -11,7 +11,7 @@ import javax.validation.ConstraintValidatorContext;
 @Component
 @RequiredArgsConstructor
 public class UniqueEmailValidator implements ConstraintValidator<UniqueEmail, String> {
-    private final UserService userService;
+    private final UserServiceImpl userService;
 
     @Override
     public void initialize(UniqueEmail constraintAnnotation) {
@@ -24,6 +24,6 @@ public class UniqueEmailValidator implements ConstraintValidator<UniqueEmail, St
             return true;
         }
 
-        return userService.isEmailUnique(email);
+        return this.userService.getUniqueEmail(email);
     }
 }

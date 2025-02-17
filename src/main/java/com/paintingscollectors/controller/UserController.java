@@ -1,106 +1,117 @@
 package com.paintingscollectors.controller;
 
-import com.paintingscollectors.config.UserSession;
 import com.paintingscollectors.model.dto.UserLoginDTO;
 import com.paintingscollectors.model.dto.UserRegisterDTO;
 import com.paintingscollectors.service.UserService;
+import com.paintingscollectors.service.impl.UserServiceImpl;
+import com.paintingscollectors.util.Constant;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
 
 @Controller
+@RequestMapping("/users")
 public class UserController {
-    private final UserSession userSession;
     private final UserService userService;
 
-    public UserController(UserSession userSession, UserService userService) {
-        this.userSession = userSession;
+    @Autowired
+    public UserController(UserService userService) {
         this.userService = userService;
     }
 
-    @ModelAttribute("registerData")
-    public UserRegisterDTO registerDTO() {
+    @ModelAttribute("registerDto")
+    public UserRegisterDTO initRegisterUser() {
         return new UserRegisterDTO();
     }
 
-    @ModelAttribute("loginData")
-    public UserLoginDTO loginDTO() {
+    @ModelAttribute("loginDto")
+    public UserLoginDTO initLoginDto(){
         return new UserLoginDTO();
     }
 
+    @ModelAttribute("badCredentials")
+    public void badCredentials(Model model) {
+        model.addAttribute(Constant.BAD_CREDENTIALS);
+    }
+
+
     @GetMapping("/register")
-    public String register() {
-        if (userSession.isLoggedIn()) {
-            return "redirect:/home";
+    public String getRegister() {
+        if (this.userService.isLoggedUser()) {
+            return Constant.REDIRECT_HOME;
         }
         return "register";
     }
 
     @PostMapping("/register")
-    public String doRegister(
-        @Valid UserRegisterDTO data,
-        BindingResult bindingResult,
-        RedirectAttributes redirectAttributes){
-
-        if (userSession.isLoggedIn()) {
-            return "redirect:/home";
+    public String postRegister(@Valid UserRegisterDTO registerDto,
+                               BindingResult bindingResult,
+                               RedirectAttributes redirectAttributes) {
+        if (this.userService.isLoggedUser()) {
+            return Constant.REDIRECT_HOME;
         }
-        if(bindingResult.hasErrors()||!data.getPassword().equals(data.getConfirmPassword())){
-            redirectAttributes.addFlashAttribute("registerData", data);
-            redirectAttributes.addFlashAttribute(
-                    "org.springframework.validation.BindingResult.registerData", bindingResult);
-            return "redirect:/register";
+        boolean isMatchedPassword = registerDto.getPassword().equals(registerDto.getConfirmPassword());
+        if (!isMatchedPassword) {
+            bindingResult.addError(new FieldError(
+                    Constant.OBJECT_DIFFERENT_CONFIRM_PASSWORD,
+                    Constant.FIELD_CONFIRM_PASSWORD,
+                    Constant.DEFAULT_MESSAGE));
         }
-        boolean success = userService.register(data);
-        if(!success){
-            return "redirect:/register";
+        if (bindingResult.hasErrors()) {
+            redirectAttributes
+                    .addFlashAttribute(Constant.REGISTER_ATTRIBUTE_NAME, registerDto)
+                    .addFlashAttribute(Constant.REGISTER_BINDING_RESULT_NAME, bindingResult);
+            return Constant.REDIRECT_REGISTER;
         }
-        return "redirect:/login";
+        this.userService.registerUser(registerDto);
+        return Constant.REDIRECT_LOGIN;
     }
 
     @GetMapping("/login")
-    public String login() {
-        if (userSession.isLoggedIn()) {
-            return "redirect:/home";
+    public String getLogin() {
+        if (this.userService.isLoggedUser()) {
+            return Constant.REDIRECT_HOME;
         }
         return "login";
     }
 
     @PostMapping("/login")
-    public String doLogin(
-        @Valid UserLoginDTO data,
-        BindingResult bindingResult,
-        RedirectAttributes redirectAttributes){
-
-        if (userSession.isLoggedIn()) {
-            return "redirect:/home";
+    public String postLogin(@Valid UserLoginDTO loginDto,
+                            BindingResult bindingResult,
+                            RedirectAttributes redirectAttributes) {
+        if (this.userService.isLoggedUser()) {
+            return Constant.REDIRECT_HOME;
         }
-        if(bindingResult.hasErrors()){
-            redirectAttributes.addFlashAttribute("loginData", data);
-            redirectAttributes.addFlashAttribute(
-                    "org.springframework.validation.BindingResult.loginData", bindingResult);
-            return "redirect:/login";
+        if (bindingResult.hasErrors()) {
+            redirectAttributes
+                    .addFlashAttribute(Constant.LOGIN_ATTRIBUTE_NAME, loginDto)
+                    .addFlashAttribute(Constant.LOGIN_BINDING_RESULT_NAME, bindingResult);
+            return Constant.REDIRECT_LOGIN;
         }
-        boolean success = userService.login(data);
-        if(!success){
-            redirectAttributes.addFlashAttribute("loginData", data);
-            return "redirect:/login";
+        if (!this.userService.loginUser(loginDto)) {
+            redirectAttributes
+                    .addFlashAttribute(Constant.LOGIN_ATTRIBUTE_NAME, loginDto)
+                    .addFlashAttribute(Constant.BAD_CREDENTIALS, true);
+            return Constant.REDIRECT_LOGIN;
         }
-        return "redirect:/home";
+        return Constant.REDIRECT_HOME;
     }
 
     @GetMapping("/logout")
-    public String logout(){
-        if (!userSession.isLoggedIn()) {
-            return "redirect:/";
+    public String logout() {
+        if (!this.userService.isLoggedUser()) {
+            return Constant.REDIRECT_LOGIN;
         }
-        userSession.logout();
-        return "redirect:/";
+        this.userService.logoutUser();
+        return Constant.REDIRECT_LOGOUT;
     }
-
 }

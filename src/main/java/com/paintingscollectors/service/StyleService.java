@@ -1,17 +1,11 @@
 package com.paintingscollectors.service;
 
-import com.paintingscollectors.init.InitService;
-import com.paintingscollectors.repository.StyleRepository;
-import org.springframework.stereotype.Service;
+import com.paintingscollectors.model.entity.Style;
+import com.paintingscollectors.model.entity.StyleName;
 
-@Service
-public class StyleService  {
-    private final StyleRepository styleRepository;
+public interface StyleService {
+    void initStyles();
 
-    public StyleService(StyleRepository styleRepository) {
-
-        this.styleRepository = styleRepository;
-    }
-
+    Style getStyleByStyleName(StyleName styleName);
 
 }

@@ -3,9 +3,8 @@ package com.paintingscollectors.model.entity;
 import com.paintingscollectors.model.BaseEntity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+
+
 
 @Entity
 @Table(name = "styles")
@@ -15,44 +14,57 @@ public class Style extends BaseEntity {
     @Column(unique = true, nullable = false)
     private StyleName styleName;
 
-    @Column(nullable = false, length = 500)
+    @Column(columnDefinition = "TEXT")
     private String description;
 
-    @OneToMany(mappedBy = "style")
-    private List<Painting> paintings;
 
-    public Style(){
-        this.paintings = new ArrayList<>();
-    }
-    public Style(StyleName styleName, String description) {
-        this();
-
-        this.styleName = styleName;
-        this.description = description;
+    public Style() {
 
     }
+    public Style(StyleName styleName) {
+        this.setName(styleName);
+    }
 
-    public StyleName getStyleName() {
+    public StyleName getName() {
         return styleName;
     }
 
-    public void setStyleName(StyleName styleName) {
-        this.styleName = styleName;
+    public Style setName(StyleName styleName) {
+        this.styleName=styleName;
+        this.setDescription(styleName);
+        return this;
     }
-
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public Style setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+
+    private void setDescription(StyleName styleName) {
+        String description = "";
+        switch (styleName) {
+            case IMPRESSIONISM:
+                description = "Impressionism is a painting style most commonly associated with the 19th century where " +
+                        "small brush strokes are used to build up a larger picture.";
+                break;
+            case ABSTRACT:
+                description = "Abstract art does not attempt to represent recognizable subjects in a realistic manner.";
+                break;
+            case EXPRESSIONISM:
+                description = "Expressionism is a style of art that doesn't concern itself with realism.";
+                break;
+            case SURREALISM:
+                description = "Surrealism is characterized by dreamlike, fantastical imagery that often defies logical explanation.";
+                break;
+            case REALISM:
+                description = "Also known as naturalism, this style of art is considered as 'real art' and has been" +
+                        " the dominant style of painting since the Renaissance.";
+                break;
+        }
         this.description = description;
     }
 
-    public List<Painting> getPaintings() {
-        return paintings;
-    }
-
-    public void setPaintings(List<Painting> paintings) {
-        this.paintings = paintings;
-    }
 }

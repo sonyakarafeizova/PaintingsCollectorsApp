@@ -3,7 +3,6 @@ package com.paintingscollectors.model.entity;
 import com.paintingscollectors.model.BaseEntity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,16 +14,16 @@ public class User extends BaseEntity {
     private String username;
     @Column(nullable = false)
     private String password;
-    @Column(nullable = false)
+    @Column(nullable = false,unique = true)
     private String email;
 
-    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+    @OneToMany(fetch=FetchType.EAGER)
     private Set<Painting> paintings;
-    @ManyToMany
-    private Set<Painting> favoritePaintings = new HashSet <>();
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Set<Painting> favoritePaintings;
 
-    @ManyToMany
-    private Set<Painting> ratedPaintings = new HashSet<>();
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Set<Painting> ratedPaintings;
 
     public User() {
 this.paintings = new HashSet<>();
@@ -52,32 +51,36 @@ this.paintings = new HashSet<>();
         return email;
     }
 
-    public void setEmail(String email) {
+    public User setEmail(String email) {
         this.email = email;
+        return this;
     }
 
     public Set<Painting> getPaintings() {
         return paintings;
     }
 
-    public void setPaintings(Set<Painting> paintings) {
+    public User setPaintings(Set<Painting> paintings) {
         this.paintings = paintings;
+        return this;
     }
 
     public Set<Painting> getFavoritePaintings() {
         return favoritePaintings;
     }
 
-    public void setFavoritePaintings(Set<Painting> favoritePaintings) {
+    public User setFavoritePaintings(Set<Painting> favoritePaintings) {
         this.favoritePaintings = favoritePaintings;
+        return this;
     }
 
     public Set<Painting> getRatedPaintings() {
         return ratedPaintings;
     }
 
-    public void setRatedPaintings(Set<Painting> ratedPaintings) {
+    public User setRatedPaintings(Set<Painting> ratedPaintings) {
         this.ratedPaintings = ratedPaintings;
+        return this;
     }
 
     public void addFavorite(Painting painting) {

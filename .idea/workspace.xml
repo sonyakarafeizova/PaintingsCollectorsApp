@@ -5,57 +5,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57fec7ab-543f-4080-bc05-91ba6c102769" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/-PaintingsCollectorsApp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/config/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/config/UserSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/controller/PaintingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/UserLoginDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/service/PaintingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/config/Config.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/config/UserSession.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/controller/HomeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/controller/PaintingController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/UserLoginDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/UserRegisterDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/service/PaintingService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/service/impl/StyleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/6a86e2a1-1e1f-48fc-8a18-af5b7f7261d3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6a86e2a1-1e1f-48fc-8a18-af5b7f7261d3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/config/UserSession.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/controller/PaintingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/controller/PaintingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/init/InitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/init/InitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/BaseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/AddPaintingDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/AddPaintingDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/PaintingDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/PaintingDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/UserRegisterDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/StyleDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/UserLoginDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/UserLoginDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/UserRegisterDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/dto/UserRegisterDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/entity/Painting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/entity/Painting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/entity/Style.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/entity/Style.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/model/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/repository/PaintingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/repository/PaintingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/repository/StyleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/repository/StyleRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/service/StyleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/service/StyleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/service/PaintingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/service/impl/PaintingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/service/StyleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/vallidation/LoggedUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/vallidation/validator/UniqueEmailValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/vallidation/validator/UniqueEmailValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/vallidation/validator/UniqueUsernameValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paintingscollectors/vallidation/validator/UniqueUsernameValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add-painting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add-painting.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/commons.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/commons.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/config/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/config/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/config/UserSession.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/controller/PaintingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/controller/PaintingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/init/InitService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/init/InitService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/BaseEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/AddPaintingDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/AddPaintingDTO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/PaintingDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/PaintingDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/UserDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/StyleDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/UserLoginDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/UserLoginDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/UserRegisterDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/dto/UserRegisterDTO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/entity/Painting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/entity/Painting.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/entity/Style.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/entity/Style.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/model/entity/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/repository/PaintingRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/repository/PaintingRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/repository/StyleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/repository/StyleRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/service/PaintingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/service/PaintingService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/service/StyleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/service/StyleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/vallidation/LoggedUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/vallidation/validator/UniqueEmailValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/vallidation/validator/UniqueEmailValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paintingscollectors/vallidation/validator/UniqueUsernameValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paintingscollectors/vallidation/validator/UniqueUsernameValidator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/add-painting.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/add-painting.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/commons.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/commons.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
@@ -71,14 +78,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/paintingscollectors/util/Constant.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -95,40 +105,40 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.PaintingsCollectorsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ResellerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sonya/Downloads/2024-spring-fund-expam-prep2-main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;bd3f877cb13a886c3c31869d47cdd7d2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.PaintingsCollectorsApplication.executor": "Run",
+    "Spring Boot.ResellerApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Sonya/Desktop/2024-spring-fundamentals-main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "bd3f877cb13a886c3c31869d47cdd7d2",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.paintingscollectors.vallidation.validator" />
@@ -168,6 +178,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="-PaintingsCollectorsApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="-PaintingsCollectorsApp" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -220,6 +243,10 @@
       <workItem from="1737464782023" duration="32226000" />
       <workItem from="1737631457256" duration="951000" />
       <workItem from="1737632440478" duration="8937000" />
+      <workItem from="1737706384649" duration="8450000" />
+      <workItem from="1738844541747" duration="5970000" />
+      <workItem from="1738869006961" duration="2608000" />
+      <workItem from="1739774751422" duration="5886000" />
     </task>
     <servers />
   </component>
